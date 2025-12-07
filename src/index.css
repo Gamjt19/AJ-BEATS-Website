@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+body {
+  @apply bg-primary text-white font-sans;
+}
+
+.text-gold {
+  color: #D4AF37;
+}
+
+.bg-gold {
+  background-color: #D4AF37;
+}
+
+.text-maroon {
+  color: #800000;
+}
+
+.bg-maroon {
+  background-color: #800000;
+}
