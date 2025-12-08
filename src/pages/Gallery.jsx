@@ -44,13 +44,23 @@ const Gallery = () => {
                 <div>
                     <h2 className="text-2xl font-bold text-white mb-8 border-l-4 border-gold pl-4">Videos</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        {[1, 2].map((item) => (
+                        {[
+                            'WhatsApp Video 2025-12-08 at 10.01.04_747c0c87.mp4',
+                            'WhatsApp Video 2025-12-08 at 10.01.17_39882692.mp4',
+                            'WhatsApp Video 2025-12-08 at 10.01.18_93c9cee9.mp4',
+                            'WhatsApp Video 2025-12-08 at 10.01.18_f13015c0.mp4'
+                        ].map((video, index) => (
                             <div
-                                key={item}
+                                key={index}
                                 className="aspect-video bg-gray-800 rounded-lg overflow-hidden relative flex items-center justify-center cursor-pointer group hover:border hover:border-gold/50 transition-all"
-                                onClick={() => setSelectedItem({ type: 'video', id: item })}
+                                onClick={() => setSelectedItem({ type: 'video', src: `/videos/${video}` })}
                             >
-                                <span className="text-gray-500 group-hover:text-gold transition-colors">Video Placeholder {item}</span>
+                                <video
+                                    src={`/videos/${video}`}
+                                    className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-300"
+                                    muted
+                                    preload="metadata"
+                                />
                                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
                                     <span className="text-white font-medium bg-black/50 px-4 py-2 rounded-full backdrop-blur-sm">Watch</span>
                                 </div>
@@ -90,8 +100,13 @@ const Gallery = () => {
                                     className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl border border-gray-800"
                                 />
                             ) : (
-                                <div className="w-full aspect-video bg-gray-900 rounded-lg flex items-center justify-center border border-gray-800">
-                                    <span className="text-gray-400 text-xl">Video Player Placeholder {selectedItem.id}</span>
+                                <div className="w-full aspect-video bg-gray-900 rounded-lg flex items-center justify-center border border-gray-800 overflow-hidden">
+                                    <video
+                                        src={selectedItem.src}
+                                        controls
+                                        autoPlay
+                                        className="w-full h-full"
+                                    />
                                 </div>
                             )}
                         </div>
