@@ -1,16 +1,66 @@
-# React + Vite
+# AJ Beats Pathanapuram
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Official website for AJ Beats, a premier music band and choir ministry based in Pathanapuram.
 
-Currently, two official plugins are available:
+![AJ Beats Logo](/public/images/logo.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🎵 About Us
 
-## React Compiler
+AJ Beats is dedicated to providing spirit-filled musical experiences for weddings, funerals, conventions, and open-air meetings. Led by our director, Asher Daniel James, we strive for musical excellence and spiritual impact.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features
 
-## Expanding the ESLint configuration
+-   **Home**: Dynamic landing page with typing effects and immersive visuals.
+-   **Services**: Showcase of our offerings (Wedding Choir, Funeral Choir, Convention Choir, Open Air Meeting).
+-   **Band Members**: Profiles of our talented team members.
+-   **Meet the Director**: Dedicated page for our director, Asher Daniel James.
+-   **Gallery**: Photo and Video gallery with lightbox viewing experience.
+-   **Contact**: Booking information and direct WhatsApp integration.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+-   **Frontend**: [React](https://reactjs.org/) + [Vite](https://vitejs.dev/)
+-   **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+-   **Animations**: [Framer Motion](https://www.framer.com/motion/)
+-   **Icons**: [Lucide React](https://lucide.dev/)
+-   **Routing**: [React Router](https://reactrouter.com/)
+
+## 🚀 Getting Started
+
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/Gamjt19/AJ-BEATS-Website.git
+    cd AJ-BEATS-Website
+    ```
+
+2.  **Install dependencies**
+    ```bash
+    npm install
+    ```
+
+3.  **Run the development server**
+    ```bash
+    npm run dev
+    ```
+
+4.  **Build for production**
+    ```bash
+    npm run build
+    ```
+
+## 📂 Project Structure
+
+-   `src/pages`: Individual page components (Home, Services, Gallery, etc.)
+-   `src/components`: Reusable components (Navbar, Footer, WhatsAppButton)
+-   `public/images`: Static image assets
+-   `public/videos`: Video assets
+
+## 🌍 Deployment
+
+This project is configured for deployment on Netlify.
+A `_redirects` file is included in `public/` to handle client-side routing.
+
+## 📞 Contact
+
+-   **Email**: asherdanieljames@gmail.com
+-   **Location**: Pathanapuram
