@@ -14,7 +14,7 @@ const Home = () => {
                 {/* Background Image Overlay */}
                 <div className="absolute inset-0 z-0">
                     <img
-                        src="/images/1.jpg"
+                        src="/images/logo2.jpg"
                         alt="AJ Beats Performing"
                         className="w-full h-full object-cover opacity-40"
                     />
