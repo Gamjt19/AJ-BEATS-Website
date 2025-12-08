@@ -1,5 +1,5 @@
 import React from 'react';
-import { Music, Heart, Users } from 'lucide-react';
+import { Music, Heart, Users, Mic } from 'lucide-react';
 
 const Services = () => {
     const services = [
@@ -7,7 +7,7 @@ const Services = () => {
             title: "Wedding Choir",
             description: "Make your special day even more memorable with our angelic wedding choir. We provide a beautiful musical backdrop for your holy matrimony.",
             icon: <Heart size={48} className="text-gold" />,
-            image: "/images/7.jpg"
+            image: "/images/23.jpg"
         },
         {
             title: "Funeral Choir",
@@ -20,6 +20,12 @@ const Services = () => {
             description: "Powerful praise and worship for conventions and spiritual gatherings. We lead the congregation in uplifting songs that glorify God.",
             icon: <Users size={48} className="text-gold" />,
             image: "/images/6.jpg"
+        },
+        {
+            title: "Open Air Meeting",
+            description: "Engaging open-air meetings with powerful worship and messages. We bring the gospel to the streets and communities.",
+            icon: <Mic size={48} className="text-gold" />,
+            image: "/images/7.jpg"
         }
     ];
 
@@ -33,7 +39,7 @@ const Services = () => {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {services.map((service, index) => (
                         <div key={index} className="bg-gray-900 rounded-xl overflow-hidden shadow-xl hover:shadow-gold/20 transition-all duration-300 border border-gray-800 group">
                             <div className="h-48 overflow-hidden">
