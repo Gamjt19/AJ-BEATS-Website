@@ -48,7 +48,8 @@ const Gallery = () => {
                             'WhatsApp Video 2025-12-08 at 10.01.04_747c0c87.mp4',
                             'WhatsApp Video 2025-12-08 at 10.01.17_39882692.mp4',
                             'WhatsApp Video 2025-12-08 at 10.01.18_93c9cee9.mp4',
-                            'WhatsApp Video 2025-12-08 at 10.01.18_f13015c0.mp4'
+                            'WhatsApp Video 2025-12-08 at 10.01.18_f13015c0.mp4',
+                            'con_video.mp4'
                         ].map((video, index) => (
                             <div
                                 key={index}
