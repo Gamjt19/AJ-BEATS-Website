@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import Services from './pages/Services';
 import Members from './pages/Members';
 import Gallery from './pages/Gallery';
+import Director from './pages/Director';
 import Contact from './pages/Contact';
 
 // Scroll to top on route change
@@ -32,6 +33,7 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/members" element={<Members />} />
             <Route path="/gallery" element={<Gallery />} />
+            <Route path="/director" element={<Director />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
