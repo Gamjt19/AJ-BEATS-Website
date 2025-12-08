@@ -17,7 +17,7 @@ const Gallery = () => {
                 <div className="mb-20">
                     <h2 className="text-2xl font-bold text-white mb-8 border-l-4 border-gold pl-4">Photos</h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((item) => (
+                        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 23].map((item) => (
                             <div
                                 key={item}
                                 className="aspect-video bg-gray-800 rounded-lg overflow-hidden relative group cursor-pointer"
