@@ -1,0 +1,28 @@
+backend:
+  name: git-gateway
+  branch: main # Branch to update (optional; defaults to master)
+
+# local_backend: true
+
+media_folder: "public/images" # Media files will be stored in the repo under public/images
+public_folder: "/images" # The src attribute for uploaded media will begin with /images
+
+collections:
+  - name: "content"
+    label: "Content"
+    files:
+      - name: "gallery"
+        label: "Gallery"
+        file: "src/content/gallery.json"
+        description: "Manage Gallery Photos and Videos"
+        fields:
+          - label: "Photos"
+            name: "photos"
+            widget: "list"
+            summary: "{{fields.image}}"
+            field: { label: "Image", name: "image", widget: "image" }
+          - label: "Videos"
+            name: "videos"
+            widget: "list"
+            summary: "{{fields.video}}"
+            field: { label: "Video", name: "video", widget: "file" }

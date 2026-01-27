@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { X } from 'lucide-react';
 import { AnimatePresence, motion } from 'framer-motion';
 
+import galleryData from '../content/gallery.json';
+
 const Gallery = () => {
     const [selectedItem, setSelectedItem] = useState(null);
 
@@ -17,19 +19,19 @@ const Gallery = () => {
                 <div className="mb-20">
                     <h2 className="text-2xl font-bold text-white mb-8 border-l-4 border-gold pl-4">Photos</h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 23].map((item) => (
+                        {galleryData.photos.map((image, index) => (
                             <div
-                                key={item}
+                                key={index}
                                 className="aspect-video bg-gray-800 rounded-lg overflow-hidden relative group cursor-pointer"
-                                onClick={() => setSelectedItem({ type: 'image', src: `/images/${item}.jpg` })}
+                                onClick={() => setSelectedItem({ type: 'image', src: image.startsWith('/') ? image : `/images/${image}` })}
                             >
                                 <div className="absolute inset-0 flex items-center justify-center text-gray-600 group-hover:text-gold transition-colors z-0">
                                     {/* Fallback/Loading text if image fails or loads slowly */}
-                                    <span className="text-lg">{item}</span>
+                                    <span className="text-lg">{image.split('/').pop().split('.')[0]}</span>
                                 </div>
                                 <img
-                                    src={`/images/${item}.jpg`}
-                                    alt={`Photo ${item}`}
+                                    src={image.startsWith('/') ? image : `/images/${image}`}
+                                    alt={`Photo ${image}`}
                                     className="w-full h-full object-cover relative z-10 transition-transform duration-500 group-hover:scale-110"
                                 />
                                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors z-20 flex items-center justify-center opacity-0 group-hover:opacity-100">
@@ -44,20 +46,14 @@ const Gallery = () => {
                 <div>
                     <h2 className="text-2xl font-bold text-white mb-8 border-l-4 border-gold pl-4">Videos</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        {[
-                            'WhatsApp Video 2025-12-08 at 10.01.04_747c0c87.mp4',
-                            'WhatsApp Video 2025-12-08 at 10.01.17_39882692.mp4',
-                            'WhatsApp Video 2025-12-08 at 10.01.18_93c9cee9.mp4',
-                            'WhatsApp Video 2025-12-08 at 10.01.18_f13015c0.mp4',
-                            'con_video.mp4'
-                        ].map((video, index) => (
+                        {galleryData.videos.map((video, index) => (
                             <div
                                 key={index}
                                 className="aspect-video bg-gray-800 rounded-lg overflow-hidden relative flex items-center justify-center cursor-pointer group hover:border hover:border-gold/50 transition-all"
-                                onClick={() => setSelectedItem({ type: 'video', src: `/videos/${video}` })}
+                                onClick={() => setSelectedItem({ type: 'video', src: video.startsWith('/') ? video : `/videos/${video}` })}
                             >
                                 <video
-                                    src={`/videos/${video}`}
+                                    src={video.startsWith('/') ? video : `/videos/${video}`}
                                     className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-300"
                                     muted
                                     preload="metadata"
