@@ -21,12 +21,8 @@ const Members = () => {
             name: "Br. Reyan K Renjan",
             role: "Guitarist",
             image: "/images/guitarist.jpg" // Placeholder
-        },
-        {
-            name: "Br. Jes John Saji",
-            role: "Drummer",
-            image: "/images/drum.jpg" // Specific image
         }
+
     ];
 
     return (
